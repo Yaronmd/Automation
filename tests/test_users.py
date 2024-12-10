@@ -1,6 +1,7 @@
 import pytest
 from api_tests.request_helper import Request
 from selenium.webdriver.common.by import By
+import time
 
 users_requests = Request(endpoint="/users")
 
@@ -27,6 +28,6 @@ def test_google(driver):
     search_box = driver.find_element(By.NAME, "q")
     search_box.send_keys("Selenium")
     search_box.submit()
-
+    time.sleep(5)
     # Assert that the title contains the word "Selenium"
     assert "Selenium" in driver.title

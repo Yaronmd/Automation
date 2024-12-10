@@ -52,3 +52,5 @@
 2024-12-10 13:28:05,665 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
 2024-12-10 13:28:24,202 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
 2024-12-10 13:28:24,582 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 14:27:28,829 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 14:27:29,323 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
