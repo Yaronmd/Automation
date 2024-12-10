@@ -1,4 +1,4 @@
-name: Python Test with Poetry
+name: Tests
 
 on:
   push:
@@ -17,23 +17,68 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Python
+      # Step 2: Set up Docker
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      # Step 3: Install Docker Compose
+      - name: Install Docker Compose
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
+          docker-compose --version  # Verify installation
+
+      # Step 4: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.13'  # specify the version of Python you want to use
 
-      # Step 3: Install Poetry
+      # Step 5: Install Poetry
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
 
-      # Step 4: Install dependencies using Poetry
+      # Step 6: Install dependencies using Poetry
       - name: Install dependencies
         run: |
           poetry install
 
-      # Step 5: Run tests with pytest
+      # Step 7: Set up and run Selenium with Docker Compose
+      - name: Set up and run Selenium with Docker Compose
+        run: |
+          docker-compose -f docker-compose.yml up -d  # Start Selenium Hub and Node
+
+      # Step 8: Wait for Selenium Hub to be ready
+      - name: Wait for Selenium Hub to be ready
+        run: |
+              timeout=120  # Max wait time in seconds (2 minutes)
+              start_time=$(date +%s)  # Get current time in seconds
+
+              while :; do
+                # Check if the Selenium Hub is ready
+                curl -s http://localhost:4444/wd/hub/status | grep '"ready": true' && break
+                
+                # Calculate elapsed time
+                elapsed_time=$(( $(date +%s) - start_time ))
+
+                # If the timeout is reached, exit with error
+                if [ $elapsed_time -ge $timeout ]; then
+                  echo "Selenium Hub did not become ready within the timeout period."
+                  exit 1
+                fi
+
+                # Wait for a while before retrying
+                echo "Waiting for Selenium Hub to be ready..."
+                sleep 5
+              done
+
+      # Step 9: Run tests with pytest
       - name: Run tests
         run: |
           poetry run pytest -s tests/ --maxfail=1 --disable-warnings -q  # optional arguments for pytest
+
+      # Step 10: Tear down Selenium services
+      - name: Tear down Selenium
+        run: |
+          docker-compose -f docker-compose.yml down  # Stop Selenium services
