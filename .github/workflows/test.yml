@@ -11,37 +11,51 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    services:
-      selenium-hub:
-        image: selenium/standalone-chrome:latest  # Use standalone image with Chrome
-        options: --shm-size=2g  # Optional: Increase shared memory size
-        ports:
-          - 4444:4444  # Expose the Selenium Hub port
 
     steps:
       # Step 1: Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Python
+      # Step 2: Set up Docker
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      # Step 3: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.13'  # specify the version of Python you want to use
 
-      # Step 3: Install Poetry
+      # Step 4: Install Poetry
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
 
-      # Step 4: Install dependencies using Poetry
+      # Step 5: Install dependencies using Poetry
       - name: Install dependencies
         run: |
           poetry install
 
-      # Step 5: Run tests with pytest
+      # Step 6: Set up Docker Compose and start Selenium services
+      - name: Set up and run Selenium with Docker Compose
+        run: |
+          docker-compose -f docker-compose.yml up -d  # Start Selenium Hub and Node
+
+      # Step 7: Wait for Selenium Hub to be ready
+      - name: Wait for Selenium Hub to be ready
+        run: |
+          until curl -s http://localhost:4444/wd/hub/status | grep -q '"ready":true'; do
+            echo "Waiting for Selenium Hub to be ready..."
+            sleep 5
+          done
+
+      # Step 8: Run tests with pytest
       - name: Run tests
         run: |
           poetry run pytest -s tests/ --maxfail=1 --disable-warnings -q  # optional arguments for pytest
-        env:
-          SELENIUM_URL: "http://localhost:4444/wd/hub"  # Set environment variable to point to Selenium Hub
+
+      # Step 9: Tear down Selenium services
+      - name: Tear down Selenium
+        run: |
+          docker-compose -f docker-compose.yml down  # Stop Selenium services
