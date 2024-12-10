@@ -1,4 +1,4 @@
-name: Python Test with Poetry
+name: Tests
 
 on:
   push:
@@ -11,6 +11,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      selenium-hub:
+        image: selenium/standalone-chrome:latest  # Use standalone image with Chrome
+        options: --shm-size=2g  # Optional: Increase shared memory size
+        ports:
+          - 4444:4444  # Expose the Selenium Hub port
 
     steps:
       # Step 1: Checkout the repository
@@ -37,3 +43,5 @@ jobs:
       - name: Run tests
         run: |
           poetry run pytest -s tests/ --maxfail=1 --disable-warnings -q  # optional arguments for pytest
+        env:
+          SELENIUM_URL: "http://localhost:4444/wd/hub"  # Set environment variable to point to Selenium Hub
