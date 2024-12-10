@@ -57,7 +57,7 @@ jobs:
 
               while :; do
                 # Check if the Selenium Hub is ready
-                curl -s http://localhost:4444/wd/hub/status | grep -q '"ready":true' && break
+                curl -s http://localhost:4444/wd/hub/status | grep '"ready": true' && break
                 
                 # Calculate elapsed time
                 elapsed_time=$(( $(date +%s) - start_time ))
