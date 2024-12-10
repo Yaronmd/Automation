@@ -1,8 +1,9 @@
 import pytest
 from api_tests.request_helper import Request
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
-
+from pages.base_page import SeleniumBasePage
 users_requests = Request(endpoint="/users")
 
 def test_get_users():
@@ -22,12 +23,7 @@ def test_set_user():
 
 def test_google(driver):
     # Navigate to Google
-    driver.get("https://www.google.com")
-
-    # Find the search box and input "Selenium"
-    search_box = driver.find_element(By.NAME, "q")
-    search_box.send_keys("Selenium")
-    search_box.submit()
-    time.sleep(5)
-    # Assert that the title contains the word "Selenium"
-    assert "Selenium" in driver.title
+    base_page = SeleniumBasePage(driver=driver)
+    base_page.go_to_end_point("https://www.google.com")
+    base_page.send_keys(by_locator=(By.NAME,"q"),keys="Selenium"+Keys.ENTER)
+    assert base_page.validate_title("Selenium",wait_before_action=5)

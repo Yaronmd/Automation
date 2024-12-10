@@ -54,3 +54,27 @@
 2024-12-10 13:28:24,582 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
 2024-12-10 14:27:28,829 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
 2024-12-10 14:27:29,323 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 21:56:58,401 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 21:56:58,899 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 21:57:26,241 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 21:57:26,749 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 21:57:31,103 - ERROR - Failed to click by presence_of_element_located, locator:('name', 'q'), timeout:10, expection:AttributeError
+2024-12-10 21:58:39,395 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 21:58:40,070 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 21:58:44,584 - ERROR - Failed to click by presence_of_element_located, locator:('id', 'input'), timeout:10, expection:AttributeError
+2024-12-10 22:00:17,153 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 22:00:17,862 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 22:00:32,556 - ERROR - Failed to send keys by presence_of_element_located, locator:('id', 'input'), timeout:10, expection:TimeoutException
+2024-12-10 22:00:56,360 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 22:00:56,919 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 22:01:11,697 - ERROR - Failed to send keys by presence_of_element_located, locator:('id', 'input'), timeout:10, expection:TimeoutException
+2024-12-10 22:43:00,102 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 22:43:01,005 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 22:43:06,450 - INFO - Success to send keys:Selenium for locator:('name', 'q')
+2024-12-10 22:47:14,066 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 22:47:14,606 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 22:47:19,967 - INFO - Success to send keys:Selenium for locator:('name', 'q')
+2024-12-10 22:50:03,973 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 22:50:05,173 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 22:50:09,914 - INFO - Success to send keys:Selenium for locator:('name', 'q')
+2024-12-10 22:50:14,948 - INFO - Success validate title:Selenium
