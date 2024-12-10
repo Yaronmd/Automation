@@ -1,4 +1,4 @@
-name: Tests
+name: API And Selenium Tests
 
 on:
   push:
