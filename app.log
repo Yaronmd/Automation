@@ -35,3 +35,20 @@
 2024-12-10 12:59:11,812 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
 2024-12-10 12:59:25,429 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
 2024-12-10 12:59:26,071 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:18:01,511 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:18:01,997 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:20:01,781 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:20:02,435 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:22:58,752 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:22:59,476 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:22:59,499 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x106ff0590>: Failed to resolve 'selenium-hub' ([Errno 8] nodename nor servname provided, or not known)")': /wd/hub/session
+2024-12-10 13:22:59,502 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x10700c7d0>: Failed to resolve 'selenium-hub' ([Errno 8] nodename nor servname provided, or not known)")': /wd/hub/session
+2024-12-10 13:22:59,507 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPConnection object at 0x10700ca50>: Failed to resolve 'selenium-hub' ([Errno 8] nodename nor servname provided, or not known)")': /wd/hub/session
+2024-12-10 13:24:02,182 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:24:02,759 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:26:36,140 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:26:36,853 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:28:04,492 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:28:05,665 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2024-12-10 13:28:24,202 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2024-12-10 13:28:24,582 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
