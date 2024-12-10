@@ -50,28 +50,28 @@ jobs:
           docker-compose -f docker-compose.yml up -d  # Start Selenium Hub and Node
 
       # Step 8: Wait for Selenium Hub to be ready
-      # - name: Wait for Selenium Hub to be ready
-      #   run: |
-      #         timeout=120  # Max wait time in seconds (2 minutes)
-      #         start_time=$(date +%s)  # Get current time in seconds
+      - name: Wait for Selenium Hub to be ready
+        run: |
+              timeout=120  # Max wait time in seconds (2 minutes)
+              start_time=$(date +%s)  # Get current time in seconds
 
-      #         while :; do
-      #           # Check if the Selenium Hub is ready
-      #           curl -s http://localhost:4444/wd/hub/status | grep -q '"ready":true' && break
+              while :; do
+                # Check if the Selenium Hub is ready
+                curl -s http://localhost:4444/wd/hub/status | grep -q '"ready":true' && break
                 
-      #           # Calculate elapsed time
-      #           elapsed_time=$(( $(date +%s) - start_time ))
+                # Calculate elapsed time
+                elapsed_time=$(( $(date +%s) - start_time ))
 
-      #           # If the timeout is reached, exit with error
-      #           if [ $elapsed_time -ge $timeout ]; then
-      #             echo "Selenium Hub did not become ready within the timeout period."
-      #             exit 1
-      #           fi
+                # If the timeout is reached, exit with error
+                if [ $elapsed_time -ge $timeout ]; then
+                  echo "Selenium Hub did not become ready within the timeout period."
+                  exit 1
+                fi
 
-      #           # Wait for a while before retrying
-      #           echo "Waiting for Selenium Hub to be ready..."
-      #           sleep 5
-      #         done
+                # Wait for a while before retrying
+                echo "Waiting for Selenium Hub to be ready..."
+                sleep 5
+              done
 
       # Step 9: Run tests with pytest
       - name: Run tests
