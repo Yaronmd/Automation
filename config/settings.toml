@@ -1,0 +1,4 @@
+[default]
+ui_base_page = "https://www.saucedemo.com/"
+ui_username = "standard_user"
+ui_password = "secret_sauce"

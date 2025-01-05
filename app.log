@@ -281,3 +281,7 @@ Stacktrace:
 2025-01-05 14:29:27,578 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
 2025-01-05 14:29:31,584 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
 2025-01-05 14:29:31,706 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-05 15:01:52,125 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 15:01:52,741 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 15:01:56,777 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-05 15:01:56,903 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
