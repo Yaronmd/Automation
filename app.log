@@ -78,3 +78,206 @@
 2024-12-10 22:50:05,173 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
 2024-12-10 22:50:09,914 - INFO - Success to send keys:Selenium for locator:('name', 'q')
 2024-12-10 22:50:14,948 - INFO - Success validate title:Selenium
+2024-12-11 15:07:00,067 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:07:00,133 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]'), texts:[]
+2024-12-11 15:07:49,867 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:07:59,981 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]'), texts:['Home\nKika\nLychee\nKimba']
+2024-12-11 15:08:55,851 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:09:06,052 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Home', 'Kika', 'Lychee', 'Kimba']
+2024-12-11 15:11:19,055 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:11:29,222 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Home', 'Kika', 'Lychee', 'Kimba']
+2024-12-11 15:11:29,296 - INFO - Success to click,locator:('xpath', "//ul//*[.='Kika']")
+2024-12-11 15:11:30,027 - INFO - Success to send keys:Yaron for locator:('id', 'name')
+2024-12-11 15:11:30,161 - INFO - Success to send keys:yaronmord@gmail.com for locator:('id', 'email')
+2024-12-11 15:11:30,252 - INFO - Success to send keys:Hello world for locator:('id', 'message')
+2024-12-11 15:11:30,841 - INFO - Success to click,locator:('xpath', "//input[@type='submit']")
+2024-12-11 15:13:08,282 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:13:18,476 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Home', 'Kika', 'Lychee', 'Kimba']
+2024-12-11 15:33:27,876 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:33:28,187 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Home', 'Kika', 'Lychee', 'Kimba']
+2024-12-11 15:33:43,462 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:33:43,596 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Lychee', 'Kimba']
+2024-12-11 15:37:47,879 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:37:47,912 - INFO - Success get element for locator:('xpath', "//nav[@id='menu']//*[.='Menu']")
+2024-12-11 15:37:48,160 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Home', 'Kika', 'Lychee', 'Kimba']
+2024-12-11 15:37:48,283 - INFO - Success to click,locator:('xpath', "//ul//*[.='Kika']")
+2024-12-11 15:37:49,085 - INFO - Success to send keys:Yaron for locator:('id', 'name')
+2024-12-11 15:37:49,193 - INFO - Success to send keys:yaronmord@gmail.com for locator:('id', 'email')
+2024-12-11 15:37:49,285 - INFO - Success to send keys:Hello world for locator:('id', 'message')
+2024-12-11 15:37:49,948 - INFO - Success to click,locator:('xpath', "//input[@type='submit']")
+2024-12-11 15:37:58,321 - INFO - Success to click,locator:('xpath', "(//*[@href='#menu'])[1]")
+2024-12-11 15:37:58,347 - INFO - Success get element for locator:('xpath', "//nav[@id='menu']//*[.='Menu']")
+2024-12-11 15:37:58,546 - INFO - Success to ger list of text for locator:('xpath', '(//nav//ul)[2]//li'), texts:['Home', 'Kika', 'Lychee', 'Kimba']
+2024-12-11 15:37:58,658 - INFO - Success to click,locator:('xpath', "//ul//*[.='Kika']")
+2024-12-11 15:37:59,402 - INFO - Success to send keys:Yaron for locator:('id', 'name')
+2024-12-11 15:37:59,512 - INFO - Success to send keys:yaronmord@gmail.com for locator:('id', 'email')
+2024-12-11 15:37:59,597 - INFO - Success to send keys:Hello world for locator:('id', 'message')
+2024-12-11 15:38:00,183 - INFO - Success to click,locator:('xpath', "//input[@type='submit']")
+2025-01-05 14:03:16,576 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:03:16,962 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:03:30,255 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:03:30,694 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:03:36,086 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-05 14:03:36,231 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-05 14:03:55,573 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:03:55,940 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:03:59,830 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-05 14:03:59,965 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-05 14:14:06,475 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:14:07,166 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:14:19,926 - ERROR - Failed to send keys to ('id', 'user-name'). Exception: 'InputActions' object has no attribute 'logger'
+2025-01-05 14:17:49,831 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:17:50,244 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:18:02,955 - ERROR - Failed to send keys to ('id', 'user-name'). Exception: 'InputActions' object has no attribute 'logger'
+2025-01-05 14:21:21,465 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:21:21,912 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:21:34,693 - ERROR - Wait failed for locator ('id', 'user-name'). Exception: Message: 
+Stacktrace:
+#0 0x55555600334a <unknown>
+#1 0x555555b196e0 <unknown>
+#2 0x555555b683e6 <unknown>
+#3 0x555555b68681 <unknown>
+#4 0x555555badb04 <unknown>
+#5 0x555555b8c48d <unknown>
+#6 0x555555baaed7 <unknown>
+#7 0x555555b8c203 <unknown>
+#8 0x555555b5acc0 <unknown>
+#9 0x555555b5bc9e <unknown>
+#10 0x555555fd0d3b <unknown>
+#11 0x555555fd4cc2 <unknown>
+#12 0x555555fbdb6c <unknown>
+#13 0x555555fd5837 <unknown>
+#14 0x555555fa310f <unknown>
+#15 0x555555ff25a8 <unknown>
+#16 0x555555ff2770 <unknown>
+#17 0x5555560021c6 <unknown>
+#18 0x7fffff212a94 <unknown>
+#19 0x7fffff29fa34 __clone
+
+2025-01-05 14:21:34,695 - ERROR - Failed to send keys to ('id', 'user-name'). Exception: Message: 
+Stacktrace:
+#0 0x55555600334a <unknown>
+#1 0x555555b196e0 <unknown>
+#2 0x555555b683e6 <unknown>
+#3 0x555555b68681 <unknown>
+#4 0x555555badb04 <unknown>
+#5 0x555555b8c48d <unknown>
+#6 0x555555baaed7 <unknown>
+#7 0x555555b8c203 <unknown>
+#8 0x555555b5acc0 <unknown>
+#9 0x555555b5bc9e <unknown>
+#10 0x555555fd0d3b <unknown>
+#11 0x555555fd4cc2 <unknown>
+#12 0x555555fbdb6c <unknown>
+#13 0x555555fd5837 <unknown>
+#14 0x555555fa310f <unknown>
+#15 0x555555ff25a8 <unknown>
+#16 0x555555ff2770 <unknown>
+#17 0x5555560021c6 <unknown>
+#18 0x7fffff212a94 <unknown>
+#19 0x7fffff29fa34 __clone
+
+2025-01-05 14:22:42,978 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:22:43,269 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:22:55,899 - ERROR - Wait failed for locator ('id', 'user-name'). Exception: Message: 
+Stacktrace:
+#0 0x55555600334a <unknown>
+#1 0x555555b196e0 <unknown>
+#2 0x555555b683e6 <unknown>
+#3 0x555555b68681 <unknown>
+#4 0x555555badb04 <unknown>
+#5 0x555555b8c48d <unknown>
+#6 0x555555baaed7 <unknown>
+#7 0x555555b8c203 <unknown>
+#8 0x555555b5acc0 <unknown>
+#9 0x555555b5bc9e <unknown>
+#10 0x555555fd0d3b <unknown>
+#11 0x555555fd4cc2 <unknown>
+#12 0x555555fbdb6c <unknown>
+#13 0x555555fd5837 <unknown>
+#14 0x555555fa310f <unknown>
+#15 0x555555ff25a8 <unknown>
+#16 0x555555ff2770 <unknown>
+#17 0x5555560021c6 <unknown>
+#18 0x7fffff212a94 <unknown>
+#19 0x7fffff29fa34 __clone
+
+2025-01-05 14:22:55,900 - ERROR - Failed to send keys to ('id', 'user-name'). Exception: Message: 
+Stacktrace:
+#0 0x55555600334a <unknown>
+#1 0x555555b196e0 <unknown>
+#2 0x555555b683e6 <unknown>
+#3 0x555555b68681 <unknown>
+#4 0x555555badb04 <unknown>
+#5 0x555555b8c48d <unknown>
+#6 0x555555baaed7 <unknown>
+#7 0x555555b8c203 <unknown>
+#8 0x555555b5acc0 <unknown>
+#9 0x555555b5bc9e <unknown>
+#10 0x555555fd0d3b <unknown>
+#11 0x555555fd4cc2 <unknown>
+#12 0x555555fbdb6c <unknown>
+#13 0x555555fd5837 <unknown>
+#14 0x555555fa310f <unknown>
+#15 0x555555ff25a8 <unknown>
+#16 0x555555ff2770 <unknown>
+#17 0x5555560021c6 <unknown>
+#18 0x7fffff212a94 <unknown>
+#19 0x7fffff29fa34 __clone
+
+2025-01-05 14:23:08,202 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:23:08,612 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:23:21,286 - ERROR - Wait failed for locator ('id', 'user-name'). Exception: Message: 
+Stacktrace:
+#0 0x55555600334a <unknown>
+#1 0x555555b196e0 <unknown>
+#2 0x555555b683e6 <unknown>
+#3 0x555555b68681 <unknown>
+#4 0x555555badb04 <unknown>
+#5 0x555555b8c48d <unknown>
+#6 0x555555baaed7 <unknown>
+#7 0x555555b8c203 <unknown>
+#8 0x555555b5acc0 <unknown>
+#9 0x555555b5bc9e <unknown>
+#10 0x555555fd0d3b <unknown>
+#11 0x555555fd4cc2 <unknown>
+#12 0x555555fbdb6c <unknown>
+#13 0x555555fd5837 <unknown>
+#14 0x555555fa310f <unknown>
+#15 0x555555ff25a8 <unknown>
+#16 0x555555ff2770 <unknown>
+#17 0x5555560021c6 <unknown>
+#18 0x7fffff212a94 <unknown>
+#19 0x7fffff29fa34 __clone
+
+2025-01-05 14:23:21,286 - ERROR - Failed to send keys to ('id', 'user-name'). Exception: Message: 
+Stacktrace:
+#0 0x55555600334a <unknown>
+#1 0x555555b196e0 <unknown>
+#2 0x555555b683e6 <unknown>
+#3 0x555555b68681 <unknown>
+#4 0x555555badb04 <unknown>
+#5 0x555555b8c48d <unknown>
+#6 0x555555baaed7 <unknown>
+#7 0x555555b8c203 <unknown>
+#8 0x555555b5acc0 <unknown>
+#9 0x555555b5bc9e <unknown>
+#10 0x555555fd0d3b <unknown>
+#11 0x555555fd4cc2 <unknown>
+#12 0x555555fbdb6c <unknown>
+#13 0x555555fd5837 <unknown>
+#14 0x555555fa310f <unknown>
+#15 0x555555ff25a8 <unknown>
+#16 0x555555ff2770 <unknown>
+#17 0x5555560021c6 <unknown>
+#18 0x7fffff212a94 <unknown>
+#19 0x7fffff29fa34 __clone
+
+2025-01-05 14:25:57,593 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:25:58,206 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:26:02,180 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-05 14:26:02,307 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-05 14:29:27,002 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users', response status:'200'
+2025-01-05 14:29:27,578 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-05 14:29:31,584 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-05 14:29:31,706 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
