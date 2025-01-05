@@ -15,6 +15,7 @@ def driver() -> WebDriver:
     """
     # Set the desired capabilities for the driver (you can change this based on the browser you're using)
     options = Options()
+    options.add_argument("--start-maximized")
     capabilities = options.to_capabilities()
     capabilities['platformName'] = 'LINUX'
     # Set the remote WebDriver to the Selenium Hub
