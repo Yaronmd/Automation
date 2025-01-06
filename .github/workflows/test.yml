@@ -43,6 +43,7 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
+  
 
       # Step 7: Set up and run Selenium with Docker Compose
       - name: Set up and run Selenium with Docker Compose
@@ -72,12 +73,7 @@ jobs:
                 echo "Waiting for Selenium Hub to be ready..."
                 sleep 5
               done
-      - name: Install Allure CLI
-        run: |
-          curl -o allure.zip -LO https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
-          unzip allure.zip -d /tmp/allure
-          sudo mv /tmp/allure/allure /usr/local/bin/allure
-          allure --version
+      
 
       # Step 9: Run tests with pytest
       - name: Run tests
@@ -96,4 +92,30 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
-          path: allure-report 
+          path: allure-report
+  deploy:
+      needs: test
+      runs-on: ubuntu-latest
+
+      steps:
+      # Download the artifact
+      - name: Download Allure results
+        uses: actions/download-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results/
+
+      # Install Allure CLI
+      - name: Install Allure CLI
+        run: |
+          mkdir allure
+          curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
+          unzip allure.zip -d allure
+          export PATH=$PATH:$PWD/allure/allure-2.32.0/bin
+
+      # Generate and publish the Allure report
+      - name: Generate Allure Report
+        run: |
+          allure generate allure-results -o allure-report --clean
+          allure open allure-report
+  
