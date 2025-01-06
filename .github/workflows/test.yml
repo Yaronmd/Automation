@@ -74,7 +74,7 @@ jobs:
               done
       - name: Install Allure CLI
         run: |
-          curl -o allure.zip -LO https://github.com/allure-framework/allure2/releases/latest/download/allure-commandline.zip
+          curl -o allure.zip -LO https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
           unzip allure.zip -d /tmp/allure
           sudo mv /tmp/allure/allure /usr/local/bin/allure
           allure --version
