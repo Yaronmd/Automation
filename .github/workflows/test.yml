@@ -72,13 +72,28 @@ jobs:
                 echo "Waiting for Selenium Hub to be ready..."
                 sleep 5
               done
+      - name: Install Allure CLI
+        run: |
+          curl -o allure.zip -LO https://github.com/allure-framework/allure2/releases/latest/download/allure-commandline.zip
+          unzip allure.zip -d /tmp/allure
+          sudo mv /tmp/allure/allure /usr/local/bin/allure
+          allure --version
 
       # Step 9: Run tests with pytest
       - name: Run tests
         run: |
-          poetry run pytest -s tests/ --maxfail=1 --disable-warnings -q  # optional arguments for pytest
+          poetry run pytest -s tests/ --maxfail=1 --disable-warnings --alluredir allure-results
 
       # Step 10: Tear down Selenium services
       - name: Tear down Selenium
         run: |
           docker-compose -f docker-compose.yml down  # Stop Selenium services
+
+      - name: Generate Allure Report
+        run: |
+          allure generate allure-results --clean -o allure-report
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report 
