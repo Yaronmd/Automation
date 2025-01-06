@@ -79,6 +79,9 @@ jobs:
       - name: Run tests
         run: |
           poetry run pytest -s tests/ --maxfail=1 --disable-warnings --alluredir allure-results
+          
+      - name: Verify Allure results
+        run: ls -R allure-results
 
       # Step 10: Tear down Selenium services
       - name: Tear down Selenium
