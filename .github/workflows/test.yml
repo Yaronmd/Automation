@@ -43,6 +43,7 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
+  
 
       # Step 7: Set up and run Selenium with Docker Compose
       - name: Set up and run Selenium with Docker Compose
@@ -72,13 +73,46 @@ jobs:
                 echo "Waiting for Selenium Hub to be ready..."
                 sleep 5
               done
+      
 
       # Step 9: Run tests with pytest
       - name: Run tests
         run: |
-          poetry run pytest -s tests/ --maxfail=1 --disable-warnings -q  # optional arguments for pytest
+          poetry run pytest -s tests/ --maxfail=1 --disable-warnings --alluredir allure-results
+
+      - name: Verify Allure results
+        run: ls -R allure-results
 
       # Step 10: Tear down Selenium services
       - name: Tear down Selenium
         run: |
           docker-compose -f docker-compose.yml down  # Stop Selenium services
+
+
+      # Step 12: Install Allure CLI
+      - name: Install Allure CLI
+        run: |
+          mkdir -p allure
+          curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
+          unzip allure.zip -d allure
+          sudo ln -s $PWD/allure/allure-2.32.0/bin/allure /usr/local/bin/allure
+          allure --version  # Verify Allure is installed
+
+      # Step 13: Generate and Publish Allure Report
+      - name: Generate Allure Report
+        run: |
+          allure generate allure-results -o allure-report --clean
+      # Step 14: Upload Allure Report as an artifact
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
+      # Step 15: Deploy the Allure Report to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          user_name: 'github-actions'
+          user_email: 'github-actions@github.com'
