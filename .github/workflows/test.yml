@@ -102,5 +102,9 @@ jobs:
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
-          allure open allure-report
-  
+      # Step 14: Upload Allure Report as an artifact
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: allure-report
