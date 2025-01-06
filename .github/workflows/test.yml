@@ -92,10 +92,11 @@ jobs:
       # Step 12: Install Allure CLI
       - name: Install Allure CLI
         run: |
-          mkdir allure
+          mkdir -p allure
           curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.32.0/allure-2.32.0.zip
           unzip allure.zip -d allure
-          export PATH=$PATH:$PWD/allure/allure-2.32.0/bin
+          sudo ln -s $PWD/allure/allure-2.32.0/bin/allure /usr/local/bin/allure
+          allure --version  # Verify Allure is installed
 
       # Step 13: Generate and Publish Allure Report
       - name: Generate Allure Report
