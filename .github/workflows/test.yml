@@ -79,7 +79,7 @@ jobs:
       - name: Run tests
         run: |
           poetry run pytest -s tests/ --maxfail=1 --disable-warnings --alluredir allure-results
-          
+
       - name: Verify Allure results
         run: ls -R allure-results
 
@@ -89,24 +89,7 @@ jobs:
           docker-compose -f docker-compose.yml down  # Stop Selenium services
 
 
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-report
-          path: allure-report
-  deploy:
-      needs: test
-      runs-on: ubuntu-latest
-
-      steps:
-      # Download the artifact
-      - name: Download Allure results
-        uses: actions/download-artifact@v3
-        with:
-          name: allure-results
-          path: allure-results/
-
-      # Install Allure CLI
+      # Step 12: Install Allure CLI
       - name: Install Allure CLI
         run: |
           mkdir allure
@@ -114,7 +97,7 @@ jobs:
           unzip allure.zip -d allure
           export PATH=$PATH:$PWD/allure/allure-2.32.0/bin
 
-      # Generate and publish the Allure report
+      # Step 13: Generate and Publish Allure Report
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
