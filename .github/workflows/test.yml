@@ -108,3 +108,11 @@ jobs:
         with:
           name: allure-report
           path: allure-report
+      # Step 15: Deploy the Allure Report to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          user_name: 'github-actions'
+          user_email: 'github-actions@github.com'
