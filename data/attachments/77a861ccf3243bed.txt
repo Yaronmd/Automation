@@ -1,2 +1,0 @@
-INFO     root:element_input_actions.py:25 Success: Sent keys standard_user to ('id', 'user-name')
-INFO     root:element_input_actions.py:25 Success: Sent keys ***hidden*** to ('id', 'password')
