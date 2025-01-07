@@ -17,9 +17,41 @@ def login(driver,navigate):
     login_page = LoginPage(driver=driver)
     assert login_page.login(username=UI_USERNAME,password=UI_PASSWORD)
 
-@allure.feature("Essential features")
-@allure.title("Validate len of cards")
-def test_validate_len_of_cards(driver,login):
-    main_page = MainPage(driver=driver)
-    assert main_page.get_list_of_cards() == 6
 
+@pytest.fixture
+def main_page(driver, login):
+    """
+    Initialize and return the MainPage object after login.
+    """
+    return MainPage(driver=driver)
+
+@allure.title("Validate len of cards")
+def test_validate_len_of_cards(main_page:MainPage):
+    list_of_cards = main_page.get_list_of_cards()
+    assert len(list_of_cards) == 6
+
+
+@pytest.fixture
+def cards(main_page: MainPage):
+    """
+    Fixture to validate the content of cards on the main page.
+    """
+    cards = main_page.get_inventory_list_contant()
+    assert cards, "Cards content should not be empty"
+    return cards
+
+@pytest.fixture
+def selected_card(main_page: MainPage, cards):
+    """
+    Fixture to select and add a random card to the cart.
+    """
+    selected_card = main_page.add_to_card_random_inventory(cards)
+    assert selected_card, "A card should be successfully added to the cart"
+    return selected_card
+
+@allure.title("Validate cards content, select one, and add to cart")
+def test_validate_cards_contant(selected_card):
+    """
+    Test to validate the card content and ensure one card is selected and added to the cart.
+    """
+    assert selected_card, "The selected card should be returned by the fixture"

@@ -17,12 +17,15 @@ class LoginPage(SeleniumBasePage):
         self.element_actions = ElementActions(driver)
 
     def enter_username(self, username: str) -> bool:
+        self.logger.info(f"set user name:{username}")
         return self.input_actions.send_keys(self.USERNAME_INPUT, username)
 
     def enter_password(self, password: str) -> bool:
+        self.logger.info(f"set password")
         return self.input_actions.send_keys(self.PASSWORD_INPUT, password, hide_keys=True)
 
     def click_login(self) -> bool:
+        self.logger.info(f"click login")
         return self.element_actions.click_presence_of_element_located(self.LOGIN_BUTTON)
 
     def login(self, username: str, password: str) -> bool:
