@@ -12,6 +12,7 @@ class ElementActions(SeleniumBasePage):
         try:
             element = self._wait_for(EC.element_to_be_clickable, locator, timeout)
             element.click()
+            self.logger.info(f"Success to click on element {locator}.")
             return True
         except Exception as e:
             self.logger.error(f"Failed to click on element {locator}. Exception: {e}")
@@ -21,6 +22,7 @@ class ElementActions(SeleniumBasePage):
         try:
             element = self._wait_for(EC.presence_of_element_located, locator, timeout)
             element.click()
+            self.logger.info(f"Success to click on element {locator}.")
             return True
         except Exception as e:
             self.logger.error(f"Failed to click on element {locator}. Exception: {e}")
