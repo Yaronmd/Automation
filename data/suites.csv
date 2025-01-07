@@ -1,8 +1,8 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","90","test_get_users","tests.api","Tue Jan 07 22:57:32 UTC 2025","passed","Tue Jan 07 22:57:32 UTC 2025","","test_users","",""
-"","113","test_set_user","tests.api","Tue Jan 07 22:57:33 UTC 2025","passed","Tue Jan 07 22:57:33 UTC 2025","","test_users","",""
-"","23","Validate len of cards","tests.ui","Tue Jan 07 22:57:34 UTC 2025","passed","Tue Jan 07 22:57:34 UTC 2025","","test_main_page","",""
 "
 Test to validate the card content and ensure one card is selected and added to the cart.
-","0","Validate cards content, select one, and add to cart","tests.ui","Tue Jan 07 22:57:36 UTC 2025","passed","Tue Jan 07 22:57:36 UTC 2025","","test_main_page","",""
-"","121","test_get_user_by_id","tests.api","Tue Jan 07 22:57:32 UTC 2025","passed","Tue Jan 07 22:57:33 UTC 2025","","test_users","",""
+","0","Validate cards content, select one, and add to cart","tests.ui","Tue Jan 07 22:59:19 UTC 2025","passed","Tue Jan 07 22:59:19 UTC 2025","","test_main_page","",""
+"","20","Validate len of cards","tests.ui","Tue Jan 07 22:59:17 UTC 2025","passed","Tue Jan 07 22:59:17 UTC 2025","","test_main_page","",""
+"","82","test_get_user_by_id","tests.api","Tue Jan 07 22:59:15 UTC 2025","passed","Tue Jan 07 22:59:16 UTC 2025","","test_users","",""
+"","58","test_set_user","tests.api","Tue Jan 07 22:59:16 UTC 2025","passed","Tue Jan 07 22:59:16 UTC 2025","","test_users","",""
+"","83","test_get_users","tests.api","Tue Jan 07 22:59:15 UTC 2025","passed","Tue Jan 07 22:59:15 UTC 2025","","test_users","",""
