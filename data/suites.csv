@@ -1,4 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","22","Validate len of cards","tests.ui","Mon Jan 06 16:44:03 UTC 2025","passed","Mon Jan 06 16:44:03 UTC 2025","","test_main_page","",""
-"","67","test_get_users","tests.api","Mon Jan 06 16:44:01 UTC 2025","passed","Mon Jan 06 16:44:01 UTC 2025","","test_users","",""
-"","96","test_set_user","tests.api","Mon Jan 06 16:44:01 UTC 2025","passed","Mon Jan 06 16:44:01 UTC 2025","","test_users","",""
+"","55","test_set_user","tests.api","Tue Jan 07 13:32:23 UTC 2025","passed","Tue Jan 07 13:32:23 UTC 2025","","test_users","",""
+"","23","Validate len of cards","tests.ui","Tue Jan 07 13:32:25 UTC 2025","passed","Tue Jan 07 13:32:25 UTC 2025","","test_main_page","",""
+"","51","test_get_users","tests.api","Tue Jan 07 13:32:23 UTC 2025","passed","Tue Jan 07 13:32:23 UTC 2025","","test_users","",""
