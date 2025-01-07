@@ -53,8 +53,22 @@ class SeleniumBasePage:
             for elem in elements:
                 if elem.text:
                     list_of_text.append(elem.text)
-            self.logger.info(f"Success to ger list of text for locator:{by_locator}, texts:{list_of_text}")
+            self.logger.info(f"Success to get list of text for locator:{by_locator}, texts:{list_of_text}")
             return list_of_text
     
+    def get_element_text(self,by_locator:tuple,timeout:int=10):
+        element = self.get_element(by_locator=by_locator,timeout=timeout)
+        if not element:
+            return None
+        text = element.text
+        self.logger.info(f"Success to get elemnt text for locator:{by_locator}, text:{text}")
+        return text
+    
+    def get_attribute_of_element(self,by_locator:tuple,attribute:str,timeout:int=10):
+        element = self.get_element(by_locator=by_locator,timeout=timeout)
+        if not element:
+            return None
+        return element.get_attribute(attribute)
+        
 
 

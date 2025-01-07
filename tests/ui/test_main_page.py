@@ -21,5 +21,6 @@ def login(driver,navigate):
 @allure.title("Validate len of cards")
 def test_validate_len_of_cards(driver,login):
     main_page = MainPage(driver=driver)
-    assert main_page.get_list_of_cards() == 6
+    list_of_cards = main_page.get_list_of_cards()
+    assert len(list_of_cards) == 6
 

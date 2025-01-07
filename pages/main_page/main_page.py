@@ -16,5 +16,5 @@ class MainPage(SeleniumBasePage):
 
     def get_list_of_cards(self):
         elements = self.get_elements(by_locator=self.LIST_OF_CARDS)
-        return len(elements)
+        return elements
         
