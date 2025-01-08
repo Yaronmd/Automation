@@ -100,14 +100,17 @@ jobs:
           sudo ln -s $PWD/allure/allure-2.32.0/bin/allure /usr/local/bin/allure
           allure --version  # Verify Allure is installed
           
+      # Pull Allure History from GitHub Pages
       - name: Pull Allure History from GitHub Pages
         if: always()
         run: |
-          curl -L -o gh-pages.zip https://github.com/Yaronmd/Automation/archive/refs/heads/gh-pages.zip
-          unzip -o gh-pages.zip
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git clone --branch=gh-pages https://github.com/Yaronmd/Automation.git gh-pages
           mkdir -p allure-results/history
-          cp -r Automation-gh-pages/history allure-results/ || true
+          cp -r gh-pages/history allure-results || true
           echo "History folder copied to allure-results."
+      # Merge previous history
       - name: Merge Allure History
         run: |
           mkdir -p allure-report/history
@@ -116,7 +119,7 @@ jobs:
       # Generate Allure Report
       - name: Generate Allure Report
         run: |
-          allure generate --clean allure-results -o allure-report --history allure-report/history
+          allure generate allure-results -o allure-report --clean
 
       # Step 14: Upload Allure Report as an artifact
       - name: Upload Allure Report
