@@ -112,10 +112,11 @@ jobs:
         run: |
           mkdir -p allure-report/history
           cp -r allure-results/history/* allure-report/history/ || true
-      # Step 13: Generate and Publish Allure Report
+
+      # Generate Allure Report
       - name: Generate Allure Report
         run: |
-          allure generate allure-results -o allure-report --clean
+          allure generate --clean allure-results -o allure-report --history allure-report/history
 
       # Step 14: Upload Allure Report as an artifact
       - name: Upload Allure Report
