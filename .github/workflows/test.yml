@@ -108,14 +108,14 @@ jobs:
           mkdir -p allure-results/history
           cp -r Automation-gh-pages/history allure-results/ || true
           echo "History folder copied to allure-results."
+      - name: Merge Allure History
+        run: |
+          mkdir -p allure-report/history
+          cp -r allure-results/history/* allure-report/history/ || true
       # Step 13: Generate and Publish Allure Report
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
-
-      - name: Copy History Back to Allure Report
-        run: |
-          cp -r allure-results/history allure-report/ || true
 
       # Step 14: Upload Allure Report as an artifact
       - name: Upload Allure Report
