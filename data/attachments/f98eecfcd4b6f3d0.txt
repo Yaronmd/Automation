@@ -1,0 +1,6 @@
+INFO     root:login_page.py:20 set user name:standard_user
+INFO     root:element_input_actions.py:25 Success: Sent keys standard_user to ('id', 'user-name')
+INFO     root:login_page.py:24 set password
+INFO     root:element_input_actions.py:25 Success: Sent keys ***hidden*** to ('id', 'password')
+INFO     root:login_page.py:28 click login
+INFO     root:element_actions.py:25 Success to click on element ('id', 'login-button').
