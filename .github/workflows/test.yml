@@ -3,10 +3,12 @@ name: API And Selenium Tests
 on:
   push:
     branches:
-      - main
+      - main  # Run on push to the main branch
   pull_request:
     branches:
-      - main
+      - main  # Run on pull requests to the main branch
+  schedule:
+    - cron: "0 2 * * *"  # Run daily at 2:00 AM (UTC)
 
 jobs:
   test:
@@ -98,6 +100,7 @@ jobs:
           sudo ln -s $PWD/allure/allure-2.32.0/bin/allure /usr/local/bin/allure
           allure --version  # Verify Allure is installed
           
+      # Pull Allure History from GitHub Pages
       - name: Pull Allure History from GitHub Pages
         if: always()
         run: |
@@ -106,15 +109,17 @@ jobs:
           git clone --branch=gh-pages https://github.com/Yaronmd/Automation.git gh-pages
           mkdir -p allure-results/history
           cp -r gh-pages/history allure-results || true
-          echo "History folder copied to allure-results."      
-      # Step 13: Generate and Publish Allure Report
+          echo "History folder copied to allure-results."
+      # Merge previous history
+      - name: Merge Allure History
+        run: |
+          mkdir -p allure-report/history
+          cp -r allure-results/history/* allure-report/history/ || true
+
+      # Generate Allure Report
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
-
-      - name: Copy History Back to Allure Report
-        run: |
-          cp -r allure-results/history allure-report/ || true
 
       # Step 14: Upload Allure Report as an artifact
       - name: Upload Allure Report
