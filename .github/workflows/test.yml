@@ -103,13 +103,11 @@ jobs:
       - name: Pull Allure History from GitHub Pages
         if: always()
         run: |
-          git init
-          git remote add origin https://github.com/Yaronmd/Automation.git
-          git fetch origin gh-pages
-          git checkout gh-pages -- history
+          curl -L -o gh-pages.zip https://github.com/Yaronmd/Automation/archive/refs/heads/gh-pages.zip
+          unzip -o gh-pages.zip
           mkdir -p allure-results/history
-          cp -r history allure-results/ || true
-          echo "History folder copied to allure-results."  
+          cp -r Automation-gh-pages/history allure-results/ || true
+          echo "History folder copied to allure-results."
       # Step 13: Generate and Publish Allure Report
       - name: Generate Allure Report
         run: |
