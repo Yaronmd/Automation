@@ -3,10 +3,12 @@ name: API And Selenium Tests
 on:
   push:
     branches:
-      - main
+      - main  # Run on push to the main branch
   pull_request:
     branches:
-      - main
+      - main  # Run on pull requests to the main branch
+  schedule:
+    - cron: "0 2 * * *"  # Run daily at 2:00 AM (UTC)
 
 jobs:
   test:
