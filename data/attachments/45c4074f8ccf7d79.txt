@@ -1,1 +1,0 @@
-INFO     root:request_helper.py:28 Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{}, response status:'200'
