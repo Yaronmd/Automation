@@ -7,6 +7,7 @@ from pages.base_pages.navigation import Navigation
 from pages.login_page.login_page import LoginPage
 from pages.main_page.main_page import MainPage
 
+
 @pytest.fixture
 def navigate(driver):
     naviagtion = Navigation(driver=driver)
@@ -28,7 +29,12 @@ def main_page(driver, login):
 @allure.title("Validate len of cards")
 def test_validate_len_of_cards(main_page:MainPage):
     list_of_cards = main_page.get_list_of_cards()
-    assert len(list_of_cards) == 6
+    with allure.step("Validate the length of the list of cards"):
+        allure.attach(str(list_of_cards), name="List of Cards", attachment_type=allure.attachment_type.TEXT)
+
+    assert len(list_of_cards) == 6,f"Expected 6 cards, but got {len(list_of_cards)}"
+
+
 
 
 @pytest.fixture
@@ -36,18 +42,22 @@ def cards(main_page: MainPage):
     """
     Fixture to validate the content of cards on the main page.
     """
-    cards = main_page.get_inventory_list_contant()
-    assert cards, "Cards content should not be empty"
-    return cards
+    with allure.step("get list of cards"):
+        cards = main_page.get_inventory_list_contant()
+        allure.attach(str(cards), name="List of Cards", attachment_type=allure.attachment_type.TEXT)
+        assert cards, "Cards content should not be empty"
+        return cards
 
 @pytest.fixture
 def selected_card(main_page: MainPage, cards):
     """
     Fixture to select and add a random card to the cart.
     """
-    selected_card = main_page.add_to_card_random_inventory(cards)
-    assert selected_card, "A card should be successfully added to the cart"
-    return selected_card
+    with allure.step("Select Random card"):
+        selected_card = main_page.add_to_card_random_inventory(cards)
+        assert selected_card, "A card should be successfully added to the cart"
+        allure.attach(str(selected_card), attachment_type=allure.attachment_type.TEXT)
+        return selected_card
 
 @allure.title("Validate cards content, select one, and add to cart")
 def test_validate_cards_contant(selected_card):
