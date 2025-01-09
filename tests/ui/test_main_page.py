@@ -7,6 +7,7 @@ from pages.base_pages.navigation import Navigation
 from pages.login_page.login_page import LoginPage
 from pages.main_page.main_page import MainPage
 
+
 @pytest.fixture
 def navigate(driver):
     naviagtion = Navigation(driver=driver)
@@ -28,7 +29,12 @@ def main_page(driver, login):
 @allure.title("Validate len of cards")
 def test_validate_len_of_cards(main_page:MainPage):
     list_of_cards = main_page.get_list_of_cards()
-    assert len(list_of_cards) == 6
+    with allure.step("Validate the length of the list of cards"):
+        allure.attach(str(list_of_cards), name="List of Cards", attachment_type=allure.attachment_type.TEXT)
+        
+    assert len(list_of_cards) == 6,f"Expected 6 cards, but got {len(list_of_cards)}"
+
+
 
 
 @pytest.fixture
