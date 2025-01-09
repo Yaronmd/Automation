@@ -28,3 +28,7 @@ def test_set_user():
     assert response.status_code == 201
     print(response.json())
 
+def test_delete_user():
+    response = users_requests.make_delete_request(identifier="1")
+    assert response.status_code == 200  # Or 200 based on API documentation
+    print("Delete operation successful.")

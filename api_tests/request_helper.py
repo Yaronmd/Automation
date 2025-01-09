@@ -40,6 +40,21 @@ class Request():
             return None
 
     def make_post_request(self,data, **kwargs):
+        """
+        Sends a POST request to the specified endpoint.
+
+        Args:
+            data (dict or str): The payload to send in the POST request.
+            **kwargs: Additional arguments to pass to the `requests.post` method.
+
+        Returns:
+            requests.Response: The response object from the POST request if successful.
+            None: If the request fails.
+
+        Logs:
+            - Logs success with URL, data, and response status if the request is successful.
+            - Logs error with URL, response status, and exception details if the request fails.
+        """
         url = f"{BASE_URL}{self.endpoint}"
         try:
             response=requests.post(url=url,data=data,**kwargs)
@@ -49,4 +64,38 @@ class Request():
         except requests.exceptions.RequestException as e:
             logger.error(f"Failed making 'POST' request for:'{url}', response status:'{response.status_code}', exception:{e}",extra=kwargs)
             return None
-    
+        
+    def make_delete_request(self, identifier=None, **kwargs):
+        """
+        Sends a DELETE request to the specified endpoint or a specific resource.
+
+        Args:
+            identifier (str or int, optional): The identifier of the resource to delete. 
+                Appended to the endpoint URL if provided.
+            **kwargs: Additional arguments to pass to the `requests.delete` method.
+
+        Returns:
+            requests.Response: The response object from the DELETE request if successful.
+            None: If the request fails.
+
+        Logs:
+            - Logs success with URL and response status if the request is successful.
+            - Logs error with URL and exception details if the request fails.
+        """
+        url = f"{BASE_URL}{self.endpoint}"
+        if identifier:
+            url = f"{url}/{identifier}"
+        try:
+            response = requests.delete(url=url, **kwargs)
+            response.raise_for_status()
+            logger.info(
+                f"Success making 'DELETE' request for:'{url}', response status:'{response.status_code}'",
+                extra=kwargs,
+            )
+            return response
+        except requests.exceptions.RequestException as e:
+            logger.error(
+                f"Failed making 'DELETE' request for:'{url}', exception:{e}",
+                extra=kwargs,
+            )
+            return None
