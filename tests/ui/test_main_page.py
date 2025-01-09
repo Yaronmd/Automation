@@ -56,7 +56,7 @@ def selected_card(main_page: MainPage, cards):
     with allure.step("Select Random card"):
         selected_card = main_page.add_to_card_random_inventory(cards)
         assert selected_card, "A card should be successfully added to the cart"
-        allure.attach(selected_card, attachment_type=allure.attachment_type.TEXT)
+        allure.attach(str(selected_card), attachment_type=allure.attachment_type.TEXT)
         return selected_card
 
 @allure.title("Validate cards content, select one, and add to cart")
