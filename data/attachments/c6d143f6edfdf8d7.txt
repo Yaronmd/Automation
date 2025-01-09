@@ -1,0 +1,37 @@
+INFO     root:login_page.py:20 set user name:standard_user
+INFO     root:element_input_actions.py:25 Success: Sent keys standard_user to ('id', 'user-name')
+INFO     root:login_page.py:24 set password
+INFO     root:element_input_actions.py:25 Success: Sent keys ***hidden*** to ('id', 'password')
+INFO     root:login_page.py:28 click login
+INFO     root:element_actions.py:25 Success to click on element ('id', 'login-button').
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[1]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[1]"), text:Sauce Labs Backpack
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[1]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[1]"), text:carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[1]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[1]"), text:$29.99
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[1]")
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[2]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[2]"), text:Sauce Labs Bike Light
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[2]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[2]"), text:A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[2]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[2]"), text:$9.99
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[2]")
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[3]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[3]"), text:Sauce Labs Bolt T-Shirt
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[3]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[3]"), text:Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[3]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[3]"), text:$15.99
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[3]")
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[4]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[4]"), text:Sauce Labs Fleece Jacket
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[4]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[4]"), text:It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[4]")
+INFO     root:base_page.py:64 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[4]"), text:$49.99
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[4]")
+INFO     root:main_page.py:31 cards contant: [{'name': 'Sauce Labs Backpack', 'desc': 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.', 'price': '$29.99', 'image': 'https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg'}, {'name': 'Sauce Labs Bike Light', 'desc': "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'price': '$9.99', 'image': 'https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg'}, {'name': 'Sauce Labs Bolt T-Shirt', 'desc': 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'price': '$15.99', 'image': 'https://www.saucedemo.com/static/media/bolt-shirt-1200x1500.c2599ac5.jpg'}, {'name': 'Sauce Labs Fleece Jacket', 'desc': "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", 'price': '$49.99', 'image': 'https://www.saucedemo.com/static/media/sauce-pullover-1200x1500.51d7ffaf.jpg'}]
+INFO     root:element_actions.py:25 Success to click on element ('xpath', "//button[@data-test='add-to-cart-sauce-labs-bolt-t-shirt']").
+INFO     root:main_page.py:40 Sucess to add 'Sauce Labs Bolt T-Shirt' to cart
