@@ -1,0 +1,1 @@
+INFO     root:request_helper.py:91 Success making 'DELETE' request for:'https://jsonplaceholder.typicode.com/users/1', response status:'200'
