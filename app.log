@@ -1107,3 +1107,123 @@ Stacktrace:
 2025-01-09 11:08:21,055 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{'id': '2'}, response status:'200'
 2025-01-09 11:08:21,475 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
 2025-01-09 11:08:22,113 - INFO - Success making 'DELETE' request for:'https://jsonplaceholder.typicode.com/users/1', response status:'200'
+2025-01-15 00:43:00,903 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{}, response status:'200'
+2025-01-15 00:43:01,618 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{'id': '2'}, response status:'200'
+2025-01-15 00:43:02,438 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-15 00:43:03,236 - INFO - Success making 'DELETE' request for:'https://jsonplaceholder.typicode.com/users/1', response status:'200'
+2025-01-15 00:43:07,911 - INFO - set user name:standard_user
+2025-01-15 00:43:08,291 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-15 00:43:08,292 - INFO - set password
+2025-01-15 00:43:08,400 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-15 00:43:08,400 - INFO - click login
+2025-01-15 00:43:08,658 - INFO - Success to click on element ('id', 'login-button').
+2025-01-15 00:43:12,184 - INFO - set user name:standard_user
+2025-01-15 00:43:12,534 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-15 00:43:12,534 - INFO - set password
+2025-01-15 00:43:12,643 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-15 00:43:12,643 - INFO - click login
+2025-01-15 00:43:12,890 - INFO - Success to click on element ('id', 'login-button').
+2025-01-15 00:43:37,646 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{}, response status:'200'
+2025-01-15 00:43:37,993 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{'id': '2'}, response status:'200'
+2025-01-15 00:43:38,494 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-15 00:43:39,091 - INFO - Success making 'DELETE' request for:'https://jsonplaceholder.typicode.com/users/1', response status:'200'
+2025-01-15 00:43:42,687 - INFO - set user name:standard_user
+2025-01-15 00:43:43,006 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-15 00:43:43,007 - INFO - set password
+2025-01-15 00:43:43,112 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-15 00:43:43,113 - INFO - click login
+2025-01-15 00:43:43,366 - INFO - Success to click on element ('id', 'login-button').
+2025-01-15 00:43:46,938 - INFO - set user name:standard_user
+2025-01-15 00:43:47,242 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-15 00:43:47,242 - INFO - set password
+2025-01-15 00:43:47,352 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-15 00:43:47,352 - INFO - click login
+2025-01-15 00:43:47,605 - INFO - Success to click on element ('id', 'login-button').
+2025-01-15 00:43:47,662 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[1]")
+2025-01-15 00:43:47,676 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[1]"), text:Sauce Labs Backpack
+2025-01-15 00:43:47,687 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[1]")
+2025-01-15 00:43:47,698 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[1]"), text:carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2025-01-15 00:43:47,709 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[1]")
+2025-01-15 00:43:47,716 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[1]"), text:$29.99
+2025-01-15 00:43:47,727 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[1]")
+2025-01-15 00:43:47,756 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[2]")
+2025-01-15 00:43:47,765 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[2]"), text:Sauce Labs Bike Light
+2025-01-15 00:43:47,776 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[2]")
+2025-01-15 00:43:47,787 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[2]"), text:A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+2025-01-15 00:43:47,798 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[2]")
+2025-01-15 00:43:47,806 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[2]"), text:$9.99
+2025-01-15 00:43:47,822 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[2]")
+2025-01-15 00:43:47,844 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[3]")
+2025-01-15 00:43:47,854 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[3]"), text:Sauce Labs Bolt T-Shirt
+2025-01-15 00:43:47,864 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[3]")
+2025-01-15 00:43:47,872 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[3]"), text:Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+2025-01-15 00:43:47,882 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[3]")
+2025-01-15 00:43:47,891 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[3]"), text:$15.99
+2025-01-15 00:43:47,901 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[3]")
+2025-01-15 00:43:47,926 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[4]")
+2025-01-15 00:43:47,937 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[4]"), text:Sauce Labs Fleece Jacket
+2025-01-15 00:43:47,947 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[4]")
+2025-01-15 00:43:47,954 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[4]"), text:It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+2025-01-15 00:43:47,963 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[4]")
+2025-01-15 00:43:47,971 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[4]"), text:$49.99
+2025-01-15 00:43:47,982 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[4]")
+2025-01-15 00:43:47,989 - INFO - cards contant: [{'name': 'Sauce Labs Backpack', 'desc': 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.', 'price': '$29.99', 'image': 'https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg'}, {'name': 'Sauce Labs Bike Light', 'desc': "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'price': '$9.99', 'image': 'https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg'}, {'name': 'Sauce Labs Bolt T-Shirt', 'desc': 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'price': '$15.99', 'image': 'https://www.saucedemo.com/static/media/bolt-shirt-1200x1500.c2599ac5.jpg'}, {'name': 'Sauce Labs Fleece Jacket', 'desc': "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", 'price': '$49.99', 'image': 'https://www.saucedemo.com/static/media/sauce-pullover-1200x1500.51d7ffaf.jpg'}]
+2025-01-15 00:43:48,039 - INFO - Success to click on element ('xpath', "//button[@data-test='add-to-cart-sauce-labs-backpack']").
+2025-01-15 00:43:48,039 - INFO - Sucess to add 'Sauce Labs Backpack' to cart
+2025-01-15 00:43:48,050 - INFO - Success get element for locator:('css selector', "[data-test='shopping-cart-badge']")
+2025-01-15 00:43:48,058 - INFO - Success to get elemnt text for locator:('css selector', "[data-test='shopping-cart-badge']"), text:1
+2025-01-15 00:43:48,059 - INFO - Suceess to validate badge cart number
+2025-01-15 00:43:48,136 - INFO - Success to click on element ('css selector', "[data-test='shopping-cart-link']").
+2025-01-15 00:43:48,136 - INFO - Suceess to click on shopping cart
+2025-01-15 00:45:15,386 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{}, response status:'200'
+2025-01-15 00:45:15,694 - INFO - Success making 'GET' request for:'https://jsonplaceholder.typicode.com/users' with params:{'id': '2'}, response status:'200'
+2025-01-15 00:45:16,315 - INFO - Success making 'POST' request for:'https://jsonplaceholder.typicode.com/users' with data:{'firstname': 'yaron', 'lastname': 'mordechai', 'email': 'yaronmord@gmail.com'}, response status:'201'
+2025-01-15 00:45:16,991 - INFO - Success making 'DELETE' request for:'https://jsonplaceholder.typicode.com/users/1', response status:'200'
+2025-01-15 00:45:20,679 - INFO - set user name:standard_user
+2025-01-15 00:45:21,036 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-15 00:45:21,037 - INFO - set password
+2025-01-15 00:45:21,151 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-15 00:45:21,151 - INFO - click login
+2025-01-15 00:45:21,416 - INFO - Success to click on element ('id', 'login-button').
+2025-01-15 00:45:25,029 - INFO - set user name:standard_user
+2025-01-15 00:45:25,367 - INFO - Success: Sent keys standard_user to ('id', 'user-name')
+2025-01-15 00:45:25,368 - INFO - set password
+2025-01-15 00:45:25,482 - INFO - Success: Sent keys ***hidden*** to ('id', 'password')
+2025-01-15 00:45:25,482 - INFO - click login
+2025-01-15 00:45:25,737 - INFO - Success to click on element ('id', 'login-button').
+2025-01-15 00:45:25,796 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[1]")
+2025-01-15 00:45:25,810 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[1]"), text:Sauce Labs Backpack
+2025-01-15 00:45:25,820 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[1]")
+2025-01-15 00:45:25,830 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[1]"), text:carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.
+2025-01-15 00:45:25,839 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[1]")
+2025-01-15 00:45:25,847 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[1]"), text:$29.99
+2025-01-15 00:45:25,858 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[1]")
+2025-01-15 00:45:25,882 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[2]")
+2025-01-15 00:45:25,890 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[2]"), text:Sauce Labs Bike Light
+2025-01-15 00:45:25,899 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[2]")
+2025-01-15 00:45:25,907 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[2]"), text:A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.
+2025-01-15 00:45:25,915 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[2]")
+2025-01-15 00:45:25,923 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[2]"), text:$9.99
+2025-01-15 00:45:25,932 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[2]")
+2025-01-15 00:45:25,951 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[3]")
+2025-01-15 00:45:25,958 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[3]"), text:Sauce Labs Bolt T-Shirt
+2025-01-15 00:45:25,968 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[3]")
+2025-01-15 00:45:25,975 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[3]"), text:Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.
+2025-01-15 00:45:25,986 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[3]")
+2025-01-15 00:45:25,993 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[3]"), text:$15.99
+2025-01-15 00:45:26,005 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[3]")
+2025-01-15 00:45:26,024 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-name'])[4]")
+2025-01-15 00:45:26,031 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-name'])[4]"), text:Sauce Labs Fleece Jacket
+2025-01-15 00:45:26,040 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[4]")
+2025-01-15 00:45:26,047 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-desc'])[4]"), text:It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.
+2025-01-15 00:45:26,056 - INFO - Success get element for locator:('xpath', "(//*[@data-test='inventory-item-price'])[4]")
+2025-01-15 00:45:26,064 - INFO - Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[4]"), text:$49.99
+2025-01-15 00:45:26,073 - INFO - Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[4]")
+2025-01-15 00:45:26,079 - INFO - cards contant: [{'name': 'Sauce Labs Backpack', 'desc': 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.', 'price': '$29.99', 'image': 'https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg'}, {'name': 'Sauce Labs Bike Light', 'desc': "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'price': '$9.99', 'image': 'https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg'}, {'name': 'Sauce Labs Bolt T-Shirt', 'desc': 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'price': '$15.99', 'image': 'https://www.saucedemo.com/static/media/bolt-shirt-1200x1500.c2599ac5.jpg'}, {'name': 'Sauce Labs Fleece Jacket', 'desc': "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", 'price': '$49.99', 'image': 'https://www.saucedemo.com/static/media/sauce-pullover-1200x1500.51d7ffaf.jpg'}]
+2025-01-15 00:45:26,131 - INFO - Success to click on element ('xpath', "//button[@data-test='add-to-cart-sauce-labs-backpack']").
+2025-01-15 00:45:26,131 - INFO - Sucess to add 'Sauce Labs Backpack' to cart
+2025-01-15 00:45:26,142 - INFO - Success get element for locator:('css selector', "[data-test='shopping-cart-badge']")
+2025-01-15 00:45:26,150 - INFO - Success to get elemnt text for locator:('css selector', "[data-test='shopping-cart-badge']"), text:1
+2025-01-15 00:45:26,151 - INFO - Suceess to validate badge cart number is equal to: 1
+2025-01-15 00:45:26,212 - INFO - Success to click on element ('css selector', "[data-test='shopping-cart-link']").
+2025-01-15 00:45:26,213 - INFO - Suceess to click on shopping cart

@@ -48,8 +48,16 @@ def cards(main_page: MainPage):
         assert cards, "Cards content should not be empty"
         return cards
 
+
+@pytest.fixture(scope="module")
+def selected_cards_fixture():
+    """
+    Fixture to manage the list of selected cards.
+    """
+    return []
+
 @pytest.fixture
-def selected_card(main_page: MainPage, cards):
+def selected_card(main_page: MainPage, cards,selected_cards_fixture):
     """
     Fixture to select and add a random card to the cart.
     """
@@ -57,11 +65,16 @@ def selected_card(main_page: MainPage, cards):
         selected_card = main_page.add_to_card_random_inventory(cards)
         assert selected_card, "A card should be successfully added to the cart"
         allure.attach(str(selected_card), attachment_type=allure.attachment_type.TEXT)
+        selected_cards_fixture.append(selected_card)
         return selected_card
 
-@allure.title("Validate cards content, select one, and add to cart")
-def test_validate_cards_contant(selected_card):
+
+
+@allure.title("Validate cards content, select one, add to cart")
+def test_validate_cards_contant(selected_card,main_page: MainPage,selected_cards_fixture):
     """
     Test to validate the card content and ensure one card is selected and added to the cart.
     """
     assert selected_card, "The selected card should be returned by the fixture"
+    assert main_page.validate_badge_cart_number(len(selected_cards_fixture))
+    assert main_page.click_on_shopping_cart()
