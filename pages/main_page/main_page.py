@@ -8,15 +8,18 @@ from pages.main_page.inventory_card_page import InventoryCardPage
 import random
 class MainPage(SeleniumBasePage):
     # Locators
-    LIST_OF_CARDS = (By.XPATH, "//*[@data-test='inventory-list']//div[@class='inventory_item']")
-
+    list_of_cards_path = (By.XPATH, "//*[@data-test='inventory-list']//div[@class='inventory_item']")
+    cart_button_path = (By.CSS_SELECTOR,"[data-test='shopping-cart-link']")
+    badge_cart_numer_path = (By.CSS_SELECTOR,"[data-test='shopping-cart-badge']")
 
     def __init__(self, driver):
         super().__init__(driver)
         self.inventory_card_page=InventoryCardPage(driver)
+        self.element_actions = ElementActions(driver)
+        
 
     def get_list_of_cards(self):
-        elements = self.get_elements(by_locator=self.LIST_OF_CARDS)
+        elements = self.get_elements(by_locator=self.list_of_cards_path)
         return elements
     
     def get_inventory_list_contant(self):
@@ -40,6 +43,25 @@ class MainPage(SeleniumBasePage):
             self.logger.info(f"Sucess to add '{inventory_name}' to cart")
             return card
         return False
+    
+    def click_on_shopping_cart(self):
+        if not self.element_actions.click_presence_of_element_located(locator=self.cart_button_path):
+            self.logger.error("Failed to click on shopping cart")
+            return False
+        self.logger.info("Suceess to click on shopping cart")
+        return True
+
+    def validate_badge_cart_number(self,len_added_to_card:int):
+        text =  self.get_element_text(by_locator=self.badge_cart_numer_path)
+        if not text:
+            return False
+        if len_added_to_card == int(text):
+            self.logger.info(f"Suceess to validate badge cart number is equal to: {len_added_to_card}")
+            return True
+        self.logger.info("Failed to validate badge cart number is equal to: {len_added_to_card}")
+        return False
+
+
 
     
         
