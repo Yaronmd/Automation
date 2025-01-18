@@ -2,6 +2,7 @@ import pytest
 import allure
 from config.config import UI_BASE_PAGE, UI_PASSWORD, UI_USERNAME
 from pages.base_pages.navigation import Navigation
+from pages.cart_page.cart_page import CartPage
 from pages.login_page.login_page import LoginPage
 from pages.main_page.main_page import MainPage
 
@@ -16,6 +17,8 @@ def login(driver, navigate):
     login_page = LoginPage(driver=driver)
     assert login_page.login(username=UI_USERNAME, password=UI_PASSWORD)
 
+
+# main page Fixtures sand steps
 @pytest.fixture
 def main_page(driver, login):
     return MainPage(driver=driver)
@@ -47,6 +50,14 @@ def validate_card_add_to_cart_icon(main_page: MainPage, selected_cards_fixture):
 def click_shopping_cart(main_page: MainPage):
     assert main_page.click_on_shopping_cart()
 
+
+# cart page Fixtures and  steps
+
+@pytest.fixture
+def cart_page(driver):
+    return CartPage(driver)
+
+
 # Tests
 
 def test_validate_len_of_cards(main_page: MainPage):
@@ -54,9 +65,13 @@ def test_validate_len_of_cards(main_page: MainPage):
         list_of_cards = main_page.get_list_of_cards()
         assert len(list_of_cards) == 6, f"Expected 6 cards, but got {len(list_of_cards)}"
 
-def test_add_to_cart_and_validate(main_page, get_list_of_cards, selected_cards_fixture):
+def test_add_to_cart_and_validate(main_page, get_list_of_cards, selected_cards_fixture,cart_page):
     cards = get_list_of_cards
     select_random_card(main_page=main_page, cards=cards, selected_cards_fixture=selected_cards_fixture)
     validate_card_add_to_cart_icon(main_page=main_page, selected_cards_fixture=selected_cards_fixture)
     click_shopping_cart(main_page=main_page)
+    assert cart_page.validate_multiple_inventories(selected_cards_fixture)
+    assert cart_page.click_checkout()
+
+    
     
