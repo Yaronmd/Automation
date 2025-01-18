@@ -2,9 +2,6 @@ import pytest
 from api_tests.request_helper import Request
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import time
-from config.config import UI_BASE_PAGE
-from pages.base_pages.base_page import SeleniumBasePage
 users_requests = Request(endpoint="/users")
 
 def test_get_users():
