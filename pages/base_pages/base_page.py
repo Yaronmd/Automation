@@ -34,7 +34,16 @@ class SeleniumBasePage:
             self.logger.info(f"Success get element for locator:{by_locator}")
             return element
         except Exception as e:
-            self.logger.error(f"Failed to validate to get elemnt for locator:{by_locator}, exception:{type(e).__name__}")
+            self.logger.error(f"Failed to get elemnt for locator:{by_locator}, exception:{type(e).__name__}")
+            return False
+        
+    def get_element_when_visablity(self,by_locator:tuple,timeout:int=10):
+        try:
+            element = self._wait_for(condition=EC.visibility_of_element_located,locator=by_locator,timeout=timeout)
+            self.logger.info(f"Success get element for locator:{by_locator}")
+            return element
+        except Exception as e:
+            self.logger.error(f"Failed to get visibility_of_element_located for locator:{by_locator}, exception:{type(e).__name__}")
             return False
         
     def get_elements(self,by_locator:tuple,timeout:int=10):
@@ -56,8 +65,11 @@ class SeleniumBasePage:
             self.logger.info(f"Success to get list of text for locator:{by_locator}, texts:{list_of_text}")
             return list_of_text
     
-    def get_element_text(self,by_locator:tuple,timeout:int=10):
-        element = self.get_element(by_locator=by_locator,timeout=timeout)
+    def get_element_text(self,by_locator:tuple,timeout:int=10,as_visibility:bool=False):
+        if as_visibility:
+            element = self.get_element_when_visablity(by_locator=by_locator,timeout=timeout)
+        else:
+            element = self.get_element(by_locator=by_locator,timeout=timeout)
         if not element:
             return None
         text = element.text

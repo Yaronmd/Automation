@@ -9,7 +9,7 @@ class CheckoutPage(SeleniumBasePage):
      first_name_locator_path = (By.CSS_SELECTOR,"[data-test='firstName']")
      last_name_locator_path = (By.CSS_SELECTOR,"[data-test='lastName']")
      postal_loctor_path = (By.CSS_SELECTOR,"[data-test='postalCode']")
-     button_error_locator_path = (By.CSS_SELECTOR,"[data-test='error-button']")
+     button_error_locator_path = (By.CSS_SELECTOR,"[data-test='error']")
      continue_button_locator_path = (By.CSS_SELECTOR,"[data-test='continue']")
 
      def __init__(self, driver):
@@ -91,8 +91,10 @@ class CheckoutPage(SeleniumBasePage):
         Returns:
             bool: True if the error message matches the expected text, False otherwise.
         """
-         error_message = f"Error: {field_name.title} is required"
-         message = self.get_element_text(by_locator=self.button_error_locator_path)
+         error_message = f"Error: {field_name.title()} is required"
+         message = self.get_element_text(by_locator=self.button_error_locator_path,as_visibility=True,timeout=20)
+         if not message:
+             self.logger.error(f"Got empty message for {field_name}")
          if message and message == error_message:
              return True
          self.logger.error(f"Failed to find error message: {error_message}")
