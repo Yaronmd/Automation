@@ -1,1 +1,1 @@
-{"total":6,"items":[]}
+{"total":7,"items":[{"uid":"e021ccf0f94af9fc468ab5c58c13da46","name":"Test Checkout page error messages","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}},{"uid":"b652d55e86265c937a7c1ef8c72be293","name":"Test E2E flow","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}},{"uid":"555ea24c2ceaffb586dc5fb3619cdee0","name":"Test main page as cards","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
