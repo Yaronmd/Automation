@@ -42,7 +42,7 @@ class CheckoutPage(SeleniumBasePage):
         Returns:
             bool: True if the last name was successfully set, False otherwise.
         """
-        if self.element_inputs.send_keys(by_locator=self.first_name_locator_path,keys=last_name):
+        if self.element_inputs.send_keys(by_locator=self.last_name_locator_path,keys=last_name):
             self.logger.info("Success to set last name")
             return True
         self.logger.error("Failed to set last name")
@@ -57,7 +57,7 @@ class CheckoutPage(SeleniumBasePage):
         Returns:
             bool: True if the postal code was successfully set, False otherwise.
         """
-        if self.element_inputs.send_keys(by_locator=self.first_name_locator_path,keys=postal):
+        if self.element_inputs.send_keys(by_locator=self.postal_loctor_path,keys=postal):
             self.logger.info("Success to set postal")
             return True
         self.logger.error("Failed to set postale")

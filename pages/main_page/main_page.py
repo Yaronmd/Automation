@@ -25,13 +25,13 @@ class MainPage(SeleniumBasePage):
     def get_inventory_list_contant(self):
         cards = []
         list_of_cards = self.get_list_of_cards()
-        for index in range(1,len(list_of_cards)-1):
+        for index in range(1,len(list_of_cards)+1):
             card = self.inventory_card_page.get_inventory_item(by_index=index)
             if not card:
                 self.logger.error(f"Failed to find card contant for card number:{index}")
                 return False
             cards.append(card)
-        self.logger.info(f"cards contant: {cards}")
+        self.logger.info(f"cards length:{len(cards)} and contant: {cards}")
         return cards
     
     def add_to_card_random_inventory(self,cards):
