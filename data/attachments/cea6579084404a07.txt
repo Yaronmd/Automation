@@ -47,32 +47,34 @@ INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@d
 INFO     root:base_page.py:76 Success to get elemnt text for locator:('xpath', "(//*[@data-test='inventory-item-price'])[6]"), text:$15.99
 INFO     root:base_page.py:34 Success get element for locator:('xpath', "(//*[@class='inventory_item_img']//a//img)[6]")
 INFO     root:main_page.py:34 cards length:6 and contant: [{'name': 'Sauce Labs Backpack', 'desc': 'carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.', 'price': '$29.99', 'image': 'https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg'}, {'name': 'Sauce Labs Bike Light', 'desc': "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'price': '$9.99', 'image': 'https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg'}, {'name': 'Sauce Labs Bolt T-Shirt', 'desc': 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'price': '$15.99', 'image': 'https://www.saucedemo.com/static/media/bolt-shirt-1200x1500.c2599ac5.jpg'}, {'name': 'Sauce Labs Fleece Jacket', 'desc': "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", 'price': '$49.99', 'image': 'https://www.saucedemo.com/static/media/sauce-pullover-1200x1500.51d7ffaf.jpg'}, {'name': 'Sauce Labs Onesie', 'desc': "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'price': '$7.99', 'image': 'https://www.saucedemo.com/static/media/red-onesie-1200x1500.2ec615b2.jpg'}, {'name': 'Test.allTheThings() T-Shirt (Red)', 'desc': 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.', 'price': '$15.99', 'image': 'https://www.saucedemo.com/static/media/red-tatt-1200x1500.30dadef4.jpg'}]
-INFO     root:element_actions.py:25 Success to click on element ('xpath', "//button[@data-test='add-to-cart-test.allthethings()-t-shirt-(red)']").
-INFO     root:main_page.py:43 Sucess to add 'Test.allTheThings() T-Shirt (Red)' to cart
+INFO     root:element_actions.py:25 Success to click on element ('xpath', "//button[@data-test='add-to-cart-sauce-labs-onesie']").
+INFO     root:main_page.py:43 Sucess to add 'Sauce Labs Onesie' to cart
 INFO     root:base_page.py:34 Success get element for locator:('css selector', "[data-test='shopping-cart-badge']")
 INFO     root:base_page.py:76 Success to get elemnt text for locator:('css selector', "[data-test='shopping-cart-badge']"), text:1
 INFO     root:main_page.py:59 Suceess to validate badge cart number is equal to: 1
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='shopping-cart-link']").
 INFO     root:main_page.py:51 Suceess to click on shopping cart
-INFO     root:base_page.py:34 Success get element for locator:('xpath', "//*[@data-test='inventory-item-name' and .='Test.allTheThings() T-Shirt (Red)']")
-INFO     root:cart_page.py:29 Inventory item with name 'Test.allTheThings() T-Shirt (Red)' is present.
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "//*[@data-test='inventory-item-name' and .='Sauce Labs Onesie']")
+INFO     root:cart_page.py:29 Inventory item with name 'Sauce Labs Onesie' is present.
 INFO     root:base_page.py:34 Success get element for locator:('xpath', "//*[@data-test='inventory-item-desc']")
-INFO     root:base_page.py:76 Success to get elemnt text for locator:('xpath', "//*[@data-test='inventory-item-desc']"), text:This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
-INFO     root:cart_page.py:38 Retrieved text for 'inventory-item-desc': This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.
+INFO     root:base_page.py:76 Success to get elemnt text for locator:('xpath', "//*[@data-test='inventory-item-desc']"), text:Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
+INFO     root:cart_page.py:38 Retrieved text for 'inventory-item-desc': Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.
 INFO     root:base_page.py:34 Success get element for locator:('xpath', "//*[@data-test='inventory-item-price']")
-INFO     root:base_page.py:76 Success to get elemnt text for locator:('xpath', "//*[@data-test='inventory-item-price']"), text:$15.99
-INFO     root:cart_page.py:38 Retrieved text for 'inventory-item-price': $15.99
-INFO     root:base_page.py:34 Success get element for locator:('xpath', "//*[.='Test.allTheThings() T-Shirt (Red)']//ancestor::div[@data-test='inventory-item']//*[@data-test='item-quantity' and .='1']")
-INFO     root:cart_page.py:100 Inventory 'Test.allTheThings() T-Shirt (Red)' details validated successfully.
+INFO     root:base_page.py:76 Success to get elemnt text for locator:('xpath', "//*[@data-test='inventory-item-price']"), text:$7.99
+INFO     root:cart_page.py:38 Retrieved text for 'inventory-item-price': $7.99
+INFO     root:base_page.py:34 Success get element for locator:('xpath', "//*[.='Sauce Labs Onesie']//ancestor::div[@data-test='inventory-item']//*[@data-test='item-quantity' and .='1']")
+INFO     root:cart_page.py:100 Inventory 'Sauce Labs Onesie' details validated successfully.
 INFO     root:cart_page.py:112 All inventories validated successfully.
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='checkout']").
 INFO     root:cart_page.py:71 Clicked on the checkout button.
-INFO     root:element_input_actions.py:25 Success: Sent keys John to ('css selector', "[data-test='firstName']")
+INFO     root:element_input_actions.py:25 Success: Sent keys Jane to ('css selector', "[data-test='firstName']")
 INFO     root:checkout_page.py:31 Success to set first name
-INFO     root:element_input_actions.py:25 Success: Sent keys Doe to ('css selector', "[data-test='lastName']")
+INFO     root:element_input_actions.py:25 Success: Sent keys Smith to ('css selector', "[data-test='lastName']")
 INFO     root:checkout_page.py:46 Success to set last name
-INFO     root:element_input_actions.py:25 Success: Sent keys 5678 to ('css selector', "[data-test='postalCode']")
+INFO     root:element_input_actions.py:25 Success: Sent keys  to ('css selector', "[data-test='postalCode']")
 INFO     root:checkout_page.py:61 Success to set postal
 INFO     root:checkout_page.py:79 Success to set form
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='continue']").
 INFO     root:checkout_page.py:111 Success to click continue button
+INFO     root:base_page.py:43 Success get element for locator:('css selector', "[data-test='error']")
+INFO     root:base_page.py:76 Success to get elemnt text for locator:('css selector', "[data-test='error']"), text:Error: Postal Code is required
