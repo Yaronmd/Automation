@@ -67,12 +67,14 @@ INFO     root:cart_page.py:100 Inventory 'Test.allTheThings() T-Shirt (Red)' det
 INFO     root:cart_page.py:112 All inventories validated successfully.
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='checkout']").
 INFO     root:cart_page.py:71 Clicked on the checkout button.
-INFO     root:element_input_actions.py:25 Success: Sent keys John to ('css selector', "[data-test='firstName']")
+INFO     root:element_input_actions.py:25 Success: Sent keys  to ('css selector', "[data-test='firstName']")
 INFO     root:checkout_page.py:31 Success to set first name
-INFO     root:element_input_actions.py:25 Success: Sent keys Doe to ('css selector', "[data-test='lastName']")
+INFO     root:element_input_actions.py:25 Success: Sent keys Mordechai to ('css selector', "[data-test='lastName']")
 INFO     root:checkout_page.py:46 Success to set last name
-INFO     root:element_input_actions.py:25 Success: Sent keys 5678 to ('css selector', "[data-test='postalCode']")
+INFO     root:element_input_actions.py:25 Success: Sent keys 1234 to ('css selector', "[data-test='postalCode']")
 INFO     root:checkout_page.py:61 Success to set postal
 INFO     root:checkout_page.py:79 Success to set form
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='continue']").
 INFO     root:checkout_page.py:111 Success to click continue button
+INFO     root:base_page.py:43 Success get element for locator:('css selector', "[data-test='error']")
+INFO     root:base_page.py:76 Success to get elemnt text for locator:('css selector', "[data-test='error']"), text:Error: First Name is required
