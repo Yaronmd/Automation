@@ -67,11 +67,11 @@ INFO     root:cart_page.py:100 Inventory 'Test.allTheThings() T-Shirt (Red)' det
 INFO     root:cart_page.py:112 All inventories validated successfully.
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='checkout']").
 INFO     root:cart_page.py:71 Clicked on the checkout button.
-INFO     root:element_input_actions.py:25 Success: Sent keys Yaron to ('css selector', "[data-test='firstName']")
+INFO     root:element_input_actions.py:25 Success: Sent keys Jane to ('css selector', "[data-test='firstName']")
 INFO     root:checkout_page.py:31 Success to set first name
-INFO     root:element_input_actions.py:25 Success: Sent keys Mordechai to ('css selector', "[data-test='lastName']")
+INFO     root:element_input_actions.py:25 Success: Sent keys Smith to ('css selector', "[data-test='lastName']")
 INFO     root:checkout_page.py:46 Success to set last name
-INFO     root:element_input_actions.py:25 Success: Sent keys 1234 to ('css selector', "[data-test='postalCode']")
+INFO     root:element_input_actions.py:25 Success: Sent keys 9999 to ('css selector', "[data-test='postalCode']")
 INFO     root:checkout_page.py:61 Success to set postal
 INFO     root:checkout_page.py:79 Success to set form
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='continue']").
