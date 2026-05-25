@@ -71,8 +71,10 @@ INFO     root:element_input_actions.py:25 Success: Sent keys Jane to ('css selec
 INFO     root:checkout_page.py:31 Success to set first name
 INFO     root:element_input_actions.py:25 Success: Sent keys Smith to ('css selector', "[data-test='lastName']")
 INFO     root:checkout_page.py:46 Success to set last name
-INFO     root:element_input_actions.py:25 Success: Sent keys 9999 to ('css selector', "[data-test='postalCode']")
+INFO     root:element_input_actions.py:25 Success: Sent keys  to ('css selector', "[data-test='postalCode']")
 INFO     root:checkout_page.py:61 Success to set postal
 INFO     root:checkout_page.py:79 Success to set form
 INFO     root:element_actions.py:25 Success to click on element ('css selector', "[data-test='continue']").
 INFO     root:checkout_page.py:111 Success to click continue button
+INFO     root:base_page.py:43 Success get element for locator:('css selector', "[data-test='error']")
+INFO     root:base_page.py:76 Success to get elemnt text for locator:('css selector', "[data-test='error']"), text:Error: Postal Code is required
